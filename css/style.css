@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Koden nedan är kopierad från internet */
+    max-width: 100%; 
+}
+
+/*FIXA ALLT SOM ÄR OFF CENTER*/
+/*Fixa när man hovrar över länkarna*/
+/*Fixa mobil-versionen*/
+
+#grid_wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "hdr hdr hdr nav"
+    "img img img img"
+    "img img img img"
+    "img img img img"
+    "art art art art"
+    ;
+}
+
+#rubrik{
+    grid-area: hdr;
+    background-color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#linje{
+    height: 100px;
+    width: 3px;
+    background-color: black;
+    margin-left: 20px;
+    margin-bottom: -5px;
+}
+
+nav{
+    grid-area: nav;
+    background-color:  white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#nav-links{
+    transition: all 0.5s;
+    position: absolute;
+    top: -100vh;
+    height: 100vh;
+    width: 150vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    background-color: white;
+    margin-left: -83.4vw;
+}
+
+#nav-links a {
+    text-decoration: none;
+    color: black;
+    list-style-type: none; /*Denna fungeraade inte, fråga Leo*/
+    height: 80px; 
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    margin-top: 50px;
+    font-size: 1.2rem;
+}
+
+#nav-links a:hover{
+    font-size: 1.4rem;
+    transition: all 0.3s
+}
+
+.nav-active {
+    transform: translateY(100vh);
+}
+
+.burger_line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 20%;
+    transition: all 0.5s;
+}
+
+.crossed_line #line_2 {
+    opacity: 0;
+}
+
+.crossed_line #line_1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.crossed_line #line_3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#burger {
+    cursor: pointer;
+    width: max-content;
+    margin-bottom: 10px;
+}
+
+#image{
+    width: 100vw;
+    height: max-content;
+}
+
+#img-parent{
+    grid-area: img;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+article {
+    grid-area: art;
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr;
+    grid-template-areas:  
+    "rbk rbk"
+    "txt txt"
+    ;
+    margin-left: 0px;
+    width: 100vw;
+}
+
+article h2{
+    background: white;
+    grid-area: rbk;
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+article p{
+    background-color: white;
+    grid-area: txt;
+    padding: 7px;
+}
+
+@media screen and (min-width:800px) {
+    #grid_wrapper{
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px 100px 1fr 1fr 1fr;
+        grid-template-areas: 
+        "hdr hdr hdr hdr hdr"
+        "nav nav nav nav nav"
+        "art art img img img"
+        "art art img img img"
+        "art art img img img"
+        ;
+    }
+
+    #img-parent{
+        grid-area: img;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #image{
+        width: max-content;
+        height: max-content;
+    }
+
+    article p{
+        background-color: white;
+        grid-area: txt;
+        font-size: 1.2rem;
+    }
+
+    #burger{
+        display: none;
+    }
+
+    #nav-links{
+        top: 85px;
+        height: 100px;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        align-items: center;
+        background-color: white;
+        margin-left: 0;
+        list-style: none;
+    }
+
+    #nav-links a {
+        margin-bottom: 50px;
+        height: 70px;
+        width: 20vw;
+        border-radius: 7px;
+        font-size: 1.2rem;
+    }
+
+    nav{
+        grid-area: nav;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-around;
+    }
+
+    .nav-active{
+        transform: none;
+    }
+
+    #linje{
+        display: none;
+    }
+
+    article{
+        width: 50vw;
+    }
+}
