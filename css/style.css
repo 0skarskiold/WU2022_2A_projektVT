@@ -146,6 +146,9 @@
     background-color: black;
     margin-left: 20px;
     margin-bottom: -5px;
+    position: absolute;
+    left: -50px;
+    bottom: -20px;
 }
 
 nav{
@@ -162,18 +165,18 @@ nav{
     position: absolute;
     top: -100vh;
     height: 100vh;
-    width: 150vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content:space-around;
     background-color: white;
-    margin-left: -83.4vw;
+    left: 0;
+    list-style: none;
 }
 
 #nav-links a {
     text-decoration: none;
     color: black;
-    list-style-type: none; /*Denna fungeraade inte, fråga Leo*/
     height: 80px; 
     background-color: rgb(240, 240, 240);
     display: flex;
@@ -182,16 +185,17 @@ nav{
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold;
     margin-top: 50px;
-    font-size: 1.2rem;  
+    font-size: 1.2rem; 
+    transition: font-size 0.3s 
 }
 
 #nav-links a:hover{
     font-size: 1.4rem;
-    transition: all 0.3s
 }
 
 .nav-active {
     transform: translateY(100vh);
+    position: absolute;
 }
 
 .burger_line {
@@ -219,6 +223,7 @@ nav{
     cursor: pointer;
     width: max-content;
     margin-bottom: 10px;
+    position: relative;
 }
 
 #image{
@@ -310,7 +315,6 @@ article p{
         align-items: center;
         background-color: white;
         margin-left: 0;
-        list-style: none;
     }
 
     #nav-links a {
