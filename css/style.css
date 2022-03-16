@@ -12,6 +12,8 @@
 /*Fixa en text längst upp för bokningssida som säger att här kan man boka*/
 /*FIxa bildstorlek*/
 /*Använd math för att hålla burgarmenyn i mitten*/
+/*Fixa så att man inte kan klicka på linjen*/
+/*Fråga leo om linjen i starten*/ 
 
 /*Här börjar stylingen för boendesidan*/
 *{
@@ -119,7 +121,7 @@
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr 50px;
     grid-template-rows: 100px 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "hdr hdr hdr nav"
@@ -137,7 +139,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
 }
 
 #linje{
@@ -150,6 +151,11 @@
     left: -50px;
     bottom: -20px;
 }
+
+#linje.gone{
+    display: none;
+}
+
 
 nav{
     grid-area: nav;
@@ -341,7 +347,26 @@ article p{
         display: none;
     }
 
+
+
     article{
         width: 50vw;
     }
+
+    /*Här kommer stylingen för boendesidan*/
+
+    #grid_wrapper_boende{
+        height: 175vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:100px 50px 2fr 3fr ;
+        grid-template-areas: 
+        "hdr hdr "
+        "nav nav "
+        "txt txt"
+        "bo1 bo2"
+        ;
+    }
+
 }
