@@ -6,7 +6,7 @@
     max-width: 100%; 
 }
 
-/*FIXA ALLT SOM ÄR OFF CENTER*/
+/* FIXA ALLT SOM ÄR OFF CENTER*/
 /*Fixa mobil-versionen*/
 /*Fixa så att h1 går ner till h2 och sedan h3, annars blir Leo inte glad*/
 /*Fixa en text längst upp för bokningssida som säger att här kan man boka*/
@@ -17,6 +17,7 @@
 /*Ändra färgen på sidan. Kanske lite ljusblå?*/
 /*Fixa drop-down menyn på boendesidan*/
 /*FRÅGA LEO VARFÖR BOENDERTEXTEN INTE BLIR 100VW*/
+/*Fixa font-sizen på boende-sidan */
 
 /*Här börjar stylingen för boendesidan*/
 *{
@@ -388,10 +389,11 @@ nav{
     }
 
     #article_boende_text{
-        width: 20vw;
+        width: auto;
         font-size: 1.15rem;
         line-height: 25px;
         bottom: 0;
+        padding: 0 100px 0 100px;
     } 
 
     #Harmanovagen{
@@ -400,10 +402,5 @@ nav{
 
     #oskargatan{
         margin-left: 10px;
-    }
-
-    #linje2{
-        grid-area: lnj;
-        background-color: lightblue;
     }
 }
