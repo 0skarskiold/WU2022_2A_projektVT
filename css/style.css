@@ -19,6 +19,7 @@
 /*FRÅGA LEO VARFÖR BOENDERTEXTEN INTE BLIR 100VW*/
 /*Fixa font-sizen på boende-sidan */
 /*FIXA EN GENEREL METOD FÖR HÖJDEN PÅ ARTIKLARNA PÅ BOENDESIDAN */
+/*VIKTIG FIX: FIXA FÄRGSTYLIGENN FÖR ALLA SIDORNA. BÅDE MOBIL OCH DESKTOP*/
 
 /*Här börjar stylingen för boendesidan*/
 *{
@@ -57,7 +58,7 @@
     height: auto;
     width: 80vw;
     border-radius: 3px;
-}
+}   
 
 #desc_harm{
     padding: 10px;
@@ -149,6 +150,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(23, 37, 56);
+    color: white;
 }
 
 #linje{
@@ -202,7 +205,7 @@ nav{
     font-weight: bold;
     margin-top: 50px;
     font-size: 1.2rem; 
-    transition: font-size 0.3s 
+    transition: font-size 0.3s
 }
 
 #nav-links a:hover{
@@ -244,13 +247,12 @@ nav{
 
 #image_start{
     width: 100vw;
-    height: max-content;
+    height: auto;
 }
 
 #img-parent{
     grid-area: img;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    background-color: rgb(23, 37, 56);
 }
 
 #article_start {
@@ -275,7 +277,8 @@ nav{
     display: flex;
     justify-content: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+    background-color: rgb(23, 37, 56);
+    color: white;
 }
 
 #article_start p{
@@ -304,19 +307,20 @@ nav{
 
     #img-parent{
         grid-area: img;
-        margin-top: 5px;
-        margin-bottom: 5px;
     }
 
     #image_start{
-        width: max-content;
-        height: max-content;
+        width: auto;
+        height: 500px;
+        background-color: rgb(23, 37, 56);
     }
 
-    article p{
+    #article_start p{
         background-color: white;
         grid-area: txt;
         font-size: 1.2rem;
+        background-color: rgb(23, 37, 56);
+        color: white;
     }
 
     #burger{
@@ -333,6 +337,8 @@ nav{
         align-items: center;
         background-color: white;
         margin-left: 0;
+        background-color: rgb(23, 37, 56);
+        color: white;
     }
 
     #nav-links a {
@@ -431,9 +437,7 @@ nav{
         grid-area: img;
         width: max-content;
         height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        bottom: 0;
     }
 
 
@@ -445,23 +449,31 @@ nav{
         grid-template-areas: 
         "img rbk"
         "img art"
-        ;
+        ;  
     }
 
     #bild_pa_harmanovagen{
         grid-area: img;
         width: max-content;
         height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        top: 0;
     }
 
     #art_harm{
         grid-area: art;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 120px;
+        padding-left: 180px;
+        font-size: 1.2rem;  
+        height: 500px; /*VIKTIGT, FIXA GENERELL METOD FÖR DETTA*/
     }
 
     #rubrik_harm{
         grid-area: rbk;
+        display: flex;
+        justify-content: center;
     }
 }
