@@ -15,9 +15,10 @@
 /*Fixa så att man inte kan klicka på linjen*/
 /*Fråga leo om linjen i starten*/ 
 /*Ändra färgen på sidan. Kanske lite ljusblå?*/
-/*Fixa drop-down menyn på boendesidan*/
+/*Fixa drop-down menyn på boendesidan. Den ska inte bara täcka hela sidan. Kanske lås scroll?*/
 /*FRÅGA LEO VARFÖR BOENDERTEXTEN INTE BLIR 100VW*/
 /*Fixa font-sizen på boende-sidan */
+/*FIXA EN GENEREL METOD FÖR HÖJDEN PÅ ARTIKLARNA PÅ BOENDESIDAN */
 
 /*Här börjar stylingen för boendesidan*/
 *{
@@ -52,7 +53,7 @@
     font-size: 1.6rem;
 }
 
-#bild_på_harmanovagen{
+#bild_pa_harmanovagen{
     height: auto;
     width: 80vw;
     border-radius: 3px;
@@ -90,7 +91,7 @@
     font-size: 1.6rem;
 }
 
-#bild_på_harmanovagen{
+#bild_pa_oskargatan{
     height: auto;
     width: 80vw;
     border-radius: 3px;
@@ -368,13 +369,14 @@ nav{
         height: 175vh;
         width: 100vw;
         display: grid;
-        grid-template-columns: 1fr 10px 1fr;
-        grid-template-rows:100px 50px 1fr 3fr ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:100px 50px 1fr 3fr 3fr ;
         grid-template-areas: 
-        "hdr hdr hdr"
-        "nav nav nav"
-        "txt txt txt"
-        "bo1 lnj bo2"
+        "hdr hdr"
+        "nav nav"
+        "txt txt"
+        "bo1 bo1"
+        "bo2 bo2"
         ;
     }
 
@@ -396,11 +398,70 @@ nav{
         padding: 0 100px 0 100px;
     } 
 
-    #Harmanovagen{
-        margin-right: 10px;
+    #oskargatan{
+        grid-area: bo1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas: 
+        "rbk img"
+        "art img"
+        ;
     }
 
-    #oskargatan{
-        margin-left: 10px;
+    #rubrik_osk{
+        grid-area: rbk;
+        display: flex;
+        justify-content: center;
+    }
+
+    #art_oskar{
+        grid-area: art;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 120px;
+        padding-left: 180px;
+        font-size: 1.2rem;  
+        height: 500px; /*VIKTIGT, FIXA GENERELL METOD FÖR DETTA*/
+    }
+
+    #bild_pa_oskargatan{
+        grid-area: img;
+        width: max-content;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    #Harmanovagen{
+        grid-area: bo2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas: 
+        "img rbk"
+        "img art"
+        ;
+    }
+
+    #bild_pa_harmanovagen{
+        grid-area: img;
+        width: max-content;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #art_harm{
+        grid-area: art;
+    }
+
+    #rubrik_harm{
+        grid-area: rbk;
     }
 }
