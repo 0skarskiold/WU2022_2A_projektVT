@@ -311,7 +311,7 @@ nav{
 
     #image_start{
         width: auto;
-        height: 500px;
+        height: 400px;
         background-color: rgb(23, 37, 56);
     }
 
@@ -355,6 +355,7 @@ nav{
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-around;
+        background-color: rgb(23, 37, 56);
     }
 
     .nav-active{
