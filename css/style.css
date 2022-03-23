@@ -18,18 +18,30 @@
 /*VIKTIG FIX: FIXA FÄRGSTYLIGENN FÖR ALLA SIDORNA. BÅDE MOBIL OCH DESKTOP*/
 /*Fixa så att det inte är en orch-sida  */
 
-/*Här börjar stylingen för boendesidan*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
+/*Här börjar stylingen för Att göra-sidan*/
+#grid_wrapper_att_gora{
+    height: 175 vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+    "hdr nav"
+    "all all" /*Vet inte om Leo gillar "all"*/
+    ;
 }
+
+
+
+/*Här slutar stylingen för Att göra sidan*/
+
+/*Här börjar stylingen för boendesidan*/
 
 #grid_wrapper_boende{
     height: 225vh;
     width: 100vw;
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 5fr 1fr; /*Kanske ändra sista till 50px*/
     grid-template-rows:100px 1fr 1fr ;
     grid-template-areas: 
     "hdr nav"
