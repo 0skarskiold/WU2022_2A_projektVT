@@ -7,30 +7,63 @@
 }
 
 
-/*Fixa mobil-versionen*/
 /*Fixa så att h1 går ner till h2 och sedan h3, annars blir Leo inte glad*/
 /*FIxa bildstorlek*/
 /*Ändra färgen på sidan. Kanske lite ljusblå?*/
 /*Fixa drop-down menyn på boendesidan. Den ska inte bara täcka hela sidan. Kanske lås scroll?*/
 /*FRÅGA LEO VARFÖR BOENDERTEXTEN INTE BLIR 100VW*/
 /*Fixa font-sizen på boende-sidan */
-/*FIXA EN GENEREL METOD FÖR HÖJDEN PÅ ARTIKLARNA PÅ BOENDESIDAN */
+/*FIXA EN GENERELL METOD FÖR HÖJDEN PÅ ARTIKLARNA PÅ BOENDESIDAN */
 /*VIKTIG FIX: FIXA FÄRGSTYLIGENN FÖR ALLA SIDORNA. BÅDE MOBIL OCH DESKTOP*/
 /*Fixa så att det inte är en orch-sida  */
 
 /*Här börjar stylingen för Att göra-sidan*/
 #grid_wrapper_att_gora{
-    height: 175 vh;
-    width: 100vw;
+    height: 175vh;
+    width: 100%;
     display: grid;
     grid-template-columns: 5fr 1fr;
     grid-template-rows: 100px 1fr;
     grid-template-areas: 
     "hdr nav"
-    "all all" /*Vet inte om Leo gillar "all"*/
+    "act act" 
     ;
 }
 
+#activities{
+    grid-area: act;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+}
+
+#besok_gullh{
+    text-decoration: none;
+    position: relative;
+    height: 50vh;
+    width: 100%;
+}
+
+#bild_pa_gullh{
+    height: inherit;
+    width: auto;
+    position: relative;
+    bottom: 0;
+}
+
+#besok_gullh_text{
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    color: white;
+    width: 150px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
 
 
 
@@ -89,6 +122,13 @@
     text-decoration: none;
 }
 
+#art_harm{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
 #oskargatan{
     grid-area: bo2;
     display: flex;
@@ -127,9 +167,15 @@
     text-decoration: none;
 }
 
+#art_oskar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
 #article_boende {
     display: none;
-
 }
 
 
@@ -163,20 +209,6 @@
     color: white;
 }
 
-#linje{
-    height: 100px;
-    width: 3px;
-    background-color: black;
-    margin-left: 20px;
-    margin-bottom: -5px;
-    position: absolute;
-    left: -50px;
-    bottom: -20px;
-}
-
-#linje.gone{
-    display: none;
-}
 
 
 nav{
@@ -185,7 +217,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    border-left: 5px solid black;
 }
 
 #nav-links{
@@ -231,7 +263,7 @@ nav{
     height: 3px;
     background-color: black;
     margin: 5px;
-    border-radius: 20%;
+    border-radius: 2px;
     transition: all 0.5s;
 }
 
@@ -363,14 +395,11 @@ nav{
         align-items: flex-end;
         justify-content: space-around;
         background-color: rgb(23, 37, 56);
+        border: none;
     }
 
     .nav-active{
         transform: none;
-    }
-
-    #linje{
-        display: none;
     }
 
     #article_start{
