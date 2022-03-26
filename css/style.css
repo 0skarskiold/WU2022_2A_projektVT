@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Koden nedan är kopierad från internet */
-    max-width: 100%; 
 }
 
 
@@ -11,11 +9,15 @@
 /*FIxa bildstorlek*/
 /*Ändra färgen på sidan. Kanske lite ljusblå?*/
 /*Fixa drop-down menyn på boendesidan. Den ska inte bara täcka hela sidan. Kanske lås scroll?*/
-/*FRÅGA LEO VARFÖR BOENDERTEXTEN INTE BLIR 100VW*/
-/*Fixa font-sizen på boende-sidan */
+/*Fixa font-size */
 /*FIXA EN GENERELL METOD FÖR HÖJDEN PÅ ARTIKLARNA PÅ BOENDESIDAN */
 /*VIKTIG FIX: FIXA FÄRGSTYLIGENN FÖR ALLA SIDORNA. BÅDE MOBIL OCH DESKTOP*/
 /*Fixa så att det inte är en orch-sida  */
+/*Fixa så att man inte kan scrolla när menyn faälls ner. MOBILE ONLY*/
+/*Fixa bilder, alla ska inte vara placeholders*/
+/*FIXA BILDEN PÅ STARTSIDAN FÖR MOBIL*/
+/*Kan bara anvönda den allmänna styligngen för bakgrund*/
+
 
 /*Här börjar stylingen för Att göra-sidan*/
 #grid_wrapper_att_gora{
@@ -28,6 +30,7 @@
     "hdr nav"
     "act act" 
     ;
+    background-color: rgb(23, 37, 56);
 }
 
 #activities{
@@ -37,35 +40,113 @@
     align-items: center;
     flex-direction: column;
     height: auto;
-    width: 90%;
+    width: 100%;
 }
 
 #besok_gullh{
     text-decoration: none;
     position: relative;
     height: 50vh;
-    width: 100%;
+    width: 98%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#besok_gullh.gone{
+    display: none;
 }
 
 #bild_pa_gullh{
     height: inherit;
-    width: auto;
+    width: inherit;
     position: relative;
     bottom: 0;
 }
 
 #besok_gullh_text{
     position: absolute;
-    bottom: 20px;
-    right: 50%;
+    bottom: 10%;
     color: white;
-    width: 150px;
-    height: auto;
+    left: 20px;
+    height: 2rem;
+    width: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
+#vandra_pa_harm{
+    text-decoration: none;
+    position: relative;
+    height: 50vh;
+    width: 98%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#vandra_pa_harm.gone{
+    display: none;
+}
+
+#vandra_pa_harm_text{
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    left: 20px;
+    height: 2rem;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+#bild_pa_vandring{
+    height: inherit;
+    width: inherit;
+    position: relative;
+    bottom: 0;
+}
+
+#upptack{
+    text-decoration: none;
+    position: relative;
+    height: 50vh;
+    width: 98%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#upptack.gone{
+    display: none;
+}
+
+#upptack_pa_harm_text{
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    left: 20px;
+    height: 2rem;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+#bild_pa_museum{
+    height: inherit;
+    width: inherit;
+    position: relative;
+    bottom: 0;
+}
 
 /*Här slutar stylingen för Att göra sidan*/
 
@@ -73,7 +154,7 @@
 
 #grid_wrapper_boende{
     height: 225vh;
-    width: 100vw;
+    width: 100%;    
     display: grid;
     grid-template-columns: 5fr 1fr; /*Kanske ändra sista till 50px*/
     grid-template-rows:100px 1fr 1fr ;
@@ -186,7 +267,7 @@
 
 #grid_wrapper{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 50px;
     grid-template-rows: 100px 1fr 1fr 1fr 1fr;
@@ -213,11 +294,11 @@
 
 nav{
     grid-area: nav;
-    background-color:  white;
+    background-color: rgb(23, 37, 56);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-left: 5px solid black;
+    border-left: 5px solid white;
 }
 
 #nav-links{
@@ -261,7 +342,7 @@ nav{
 .burger_line {
     width: 25px;
     height: 3px;
-    background-color: black;
+    background-color: white;
     margin: 5px;
     border-radius: 2px;
     transition: all 0.5s;
@@ -273,10 +354,12 @@ nav{
 
 .crossed_line #line_1 {
     transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: black;
 }
 
 .crossed_line #line_3 {
     transform: rotate(45deg) translate(-5px, -6px);
+    background-color: black;
 }
 
 #burger {
@@ -332,7 +415,7 @@ nav{
     /*Här är stylingen för desktop-versionen av startsidan*/
     #grid_wrapper{
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 100px 100px 1fr 1fr 1fr;
@@ -410,7 +493,7 @@ nav{
 
     #grid_wrapper_boende{
         height: 175vh;
-        width: 100vw;
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows:100px 50px 1fr 3fr 3fr ;
