@@ -453,7 +453,7 @@ nav{
     #nav-links{
         top: 85px;
         height: 50px;
-        width: 100vw;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content:space-evenly;
@@ -598,5 +598,13 @@ nav{
         grid-area: rbk;
         display: flex;
         justify-content: center;
+    }
+
+
+    /*Här börjar stylingen för desktop-versionen av att göra-sidan.*/
+
+    #upptack:hover{ 
+        filter: brightness(115%);
+        transition: all 0.5s;
     }
 }
