@@ -63,6 +63,7 @@
     width: inherit;
     position: relative;
     bottom: 0;
+    border-radius: 7px;
 }
 
 #besok_gullh_text{
@@ -111,6 +112,7 @@
     width: inherit;
     position: relative;
     bottom: 0;
+    border-radius: 7px;
 }
 
 #upptack{
@@ -146,6 +148,7 @@
     width: inherit;
     position: relative;
     bottom: 0;
+    border-radius: 7px;
 }
 
 /*Här slutar stylingen för Att göra sidan*/
@@ -603,8 +606,55 @@ nav{
 
     /*Här börjar stylingen för desktop-versionen av att göra-sidan.*/
 
+    #grid_wrapper_att_gora{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 50px 1fr 1fr ;
+        grid-template-areas: 
+        "hdr"
+        "nav"
+        "act"
+        "act"
+        ;
+    }
+
+    #activites{
+        grid-area: act;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "act1 act2"
+        "act3 act3"
+        ;
+    }
+
+    #upptack{
+        grid-area: act3;
+    }
+    
+    #vandra_pa_harm{
+        grid-area: act1;
+    }
+
+    #besok_gullh{
+        grid-area: act2;
+    }
+
     #upptack:hover{ 
-        filter: brightness(115%);
+        filter: brightness(120%);
         transition: all 0.5s;
     }
+
+    #vandra_pa_harm:hover{
+        filter: brightness(120%);
+        transition: all 0.5s;
+    }
+
+    #besok_gullh:hover{
+        filter: brightness(120%);
+        transition: all 0.5s;
+    }
+
+
 }
