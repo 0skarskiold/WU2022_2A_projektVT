@@ -40,7 +40,7 @@
     align-items: center;
     flex-direction: column;
     height: auto;
-    width: 100%;
+    width: 99%;
 }
 
 #besok_gullh{
@@ -608,19 +608,19 @@ nav{
 
     #grid_wrapper_att_gora{
         display: grid;
+        height: 150vh;
         grid-template-columns: 1fr;
-        grid-template-rows: 100px 50px 1fr 1fr ;
+        grid-template-rows: 100px 50px 1fr ;
         grid-template-areas: 
         "hdr"
         "nav"
         "act"
-        "act"
         ;
     }
 
-    #activites{
-        grid-area: act;
+    #activities{
         display: grid;
+        grid-area: act;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 
@@ -628,17 +628,19 @@ nav{
         "act3 act3"
         ;
     }
-
-    #upptack{
-        grid-area: act3;
-    }
     
     #vandra_pa_harm{
         grid-area: act1;
     }
 
-    #besok_gullh{
+    #upptack{
         grid-area: act2;
+    }
+
+    #besok_gullh{
+        grid-area: act3;
+        top: -20px;
+        width: 99%;
     }
 
     #upptack:hover{ 
