@@ -19,6 +19,7 @@
 /*Kan bara anvönda den allmänna styligngen för bakgrund*/
 /*FIXA SÅ ATT NAVEN INTE ÄR LÄNGST UPP PÅ SIDAN*/
 /*Fixa boendesidan mobilversionen. Den är asful nu*/
+/*Fixa så att alla bilder har mått med vw/vh*/
 
 
 /*Här börjar stylingen för galleri-sidan*/
@@ -26,6 +27,9 @@
 #grid_wrapper_galleri{
     height: 110vh;
     width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
     display: grid;
     grid-template-rows: 100px 40vh 40vh 30vh;
     grid-template-columns: 5fr 1fr;
