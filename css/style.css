@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(23, 37, 56);
+    color: white;
 }
 
 
@@ -27,9 +29,6 @@
 #grid_wrapper_galleri{
     height: 110vh;
     width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
     display: grid;
     grid-template-rows: 100px 40vh 40vh 30vh;
     grid-template-columns: 5fr 1fr;
@@ -632,8 +631,8 @@ nav{
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        padding-right: 120px;
-        padding-left: 180px;
+        padding-right: 12vw;
+        padding-left: 12vw;
         font-size: 1.2rem;  
         height: 500px; /*VIKTIGT, FIXA GENERELL METOD FÖR DETTA*/
     }
@@ -740,5 +739,45 @@ nav{
         transition: all 0.5s;
     }
 
+    #grid_wrapper_galleri{
+        height: 125vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 50px 40vh 30vh 1fr;
+        grid-template-areas: 
+        "hdr"
+        "nav"
+        "sls"
+        "mix"
+        "img"
+        ;
+    }
+
+    #slideshow_container{
+        align-items: center;
+        height: 40vh;
+    }
+
+    .slideshow{
+        width: 80vw;
+    }
+
+    #static_img2_parent{
+        grid-area: img;
+        width: 100%;
+        height: auto;
+        padding-top: 5vh;
+    }
+
+    #static_image2{
+        height: 30vh;
+        width: 85vw;
+    }
+
+    #fotografer_och_bilder{
+        grid-area: mix;
+        padding-bottom: 20vh;
+    }
 
 }
