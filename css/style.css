@@ -7,13 +7,6 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-
-/*FIxa bildstorlek*/
-/*Fixa bilder, alla ska inte vara placeholders*/
-/*FIXA BILDEN PÅ STARTSIDAN FÖR MOBIL*/
-/*LOGGA*/
-
-
 #grid_wrapper_galleri.no_scroll{
     overflow-y: hidden;
     overflow: hidden;
