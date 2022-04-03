@@ -383,7 +383,7 @@
 /*Styling för startsidan nedanför*/
 
 #grid_wrapper{
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 50px;
@@ -487,13 +487,19 @@ nav{
 }
 
 #image_start{
-    width: 100vw;
-    height: auto;
+    width: auto;
+    height: 38vh;
+    border-radius: 5px;
 }
 
 #img-parent{
     grid-area: img;
     background-color: rgb(23, 37, 56);
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #article_start {
@@ -522,7 +528,7 @@ nav{
 }
 
 #article_start p{
-    background-color: white;
+    background-color: rgb(23, 37, 56);
     grid-area: txt;
     padding: 7px;
 }
@@ -588,7 +594,7 @@ nav{
     }
 
     #nav-links li{
-        height: 11vh;
+        height: 8vh;
         display: flex;
         justify-content: center;
         align-items: center;
