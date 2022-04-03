@@ -75,7 +75,7 @@
 }
 
 #static_img1{
-    width: 20vw;
+    width: 35vw;
     height: 30vh;
     border-radius: 5px;
 }
@@ -423,6 +423,11 @@
     align-items: center;
     background-color: rgb(23, 37, 56);
     color: white;
+}
+
+#logga{
+    height: 100px;
+    width: auto;
 }
 
 nav{
