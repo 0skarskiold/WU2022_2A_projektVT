@@ -4,24 +4,35 @@
     box-sizing: border-box;
     background-color: rgb(23, 37, 56);
     color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
-/*Fixa så att h1 går ner till h2 och sedan h3, annars blir Leo inte glad*/
 /*FIxa bildstorlek*/
-/*Ändra färgen på sidan. Kanske lite ljusblå?*/
-/*Fixa drop-down menyn på boendesidan. Den ska inte bara täcka hela sidan. Kanske lås scroll?*/
-/*Fixa font-size */
-/*FIXA EN GENERELL METOD FÖR HÖJDEN PÅ ARTIKLARNA PÅ BOENDESIDAN */
-/*VIKTIG FIX: FIXA FÄRGSTYLIGENN FÖR ALLA SIDORNA. BÅDE MOBIL OCH DESKTOP*/
-/*Fixa så att det inte är en orch-sida  */
-/*Fixa så att man inte kan scrolla när menyn faälls ner. MOBILE ONLY*/
 /*Fixa bilder, alla ska inte vara placeholders*/
 /*FIXA BILDEN PÅ STARTSIDAN FÖR MOBIL*/
-/*Kan bara anvönda den allmänna styligngen för bakgrund*/
-/*FIXA SÅ ATT NAVEN INTE ÄR LÄNGST UPP PÅ SIDAN*/
-/*Fixa boendesidan mobilversionen. Den är asful nu*/
-/*Fixa så att alla bilder har mått med vw/vh*/
+/*LOGGA*/
+
+
+#grid_wrapper_galleri.no_scroll{
+    overflow-y: hidden;
+    overflow: hidden;
+}
+
+#grid_wrapper_boende.no_scroll{
+    overflow-y: hidden;
+    overflow: hidden;
+}
+
+#grid_wrapper.no_scroll{
+    overflow-y: hidden;
+    overflow: hidden;
+}
+
+#grid_wrapper_att_gora.no_scroll{
+    overflow-y: hidden;
+    overflow: hidden;
+}
 
 
 /*Här börjar stylingen för galleri-sidan*/
@@ -39,6 +50,10 @@
     "sls sls"
     ;
     background-color: rgb(23, 37, 56);
+}
+
+.no_scroll{
+    overflow-y: hidden;
 }
 
 #fotografer_och_bilder{
@@ -60,7 +75,7 @@
 }
 
 #static_img1{
-    width: 40vw;
+    width: 20vw;
     height: 30vh;
     border-radius: 5px;
 }
@@ -283,7 +298,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: white;
+    background-color: rgb(23, 37, 56);
+
 }
 
 #rubrik_harm{
@@ -299,11 +315,12 @@
 #desc_harm{
     padding: 10px;
     padding-top: 0px;
+    font-family: 'Oxygen', sans-serif;
 }
 
 #booking_button_harm{
     background-color: rgb(240, 240, 240);
-    width: 12vw;
+    width: 40vw;
     height: 10vh;
     border-radius: 8px;
     display: flex;
@@ -328,7 +345,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: white;
+    background-color: rgb(23, 37, 56);
 }
 
 #rubrik_osk{
@@ -344,11 +361,12 @@
 #desc_osk{
     padding: 10px;
     padding-top: 0px;
+    font-family: 'Oxygen', sans-serif;
 }
 
 #booking_button_osk{
     background-color: rgb(240, 240, 240);
-    width: 12vw;
+    width: 40vw;
     height: 10vh;
     border-radius: 8px;
     display: flex;
@@ -407,15 +425,13 @@
     color: white;
 }
 
-
-
 nav{
     grid-area: nav;
-    background-color: rgb(23, 37, 56);
     display: flex;
     align-items: center;
     justify-content: center;
     border-left: 5px solid white;
+    z-index: 20;
 }
 
 #nav-links{
@@ -447,13 +463,19 @@ nav{
     transition: font-size 0.3s
 }
 
+
 #nav-links a:hover{
     font-size: 1.4rem;
+}
+
+#nav-links.nav-active{
+    background-color: rgb(23, 37, 56);
 }
 
 .nav-active {
     transform: translateY(100vh);
     position: absolute;
+    
 }
 
 .burger_line {
@@ -471,12 +493,12 @@ nav{
 
 .crossed_line #line_1 {
     transform: rotate(-45deg) translate(-5px, 6px);
-    background-color: black;
+    background-color: white;
 }
 
 .crossed_line #line_3 {
     transform: rotate(45deg) translate(-5px, -6px);
-    background-color: black;
+    background-color: white;
 }
 
 #burger {
@@ -485,6 +507,8 @@ nav{
     margin-bottom: 10px;
     position: relative;
 }
+
+
 
 #image_start{
     width: auto;
@@ -557,7 +581,7 @@ nav{
 
     #image_start{
         width: auto;
-        height: 400px;
+        height: 60vh;
         background-color: rgb(23, 37, 56);
         border-radius: 5px;
     }
@@ -677,6 +701,14 @@ nav{
         margin-right: 1vw;
     }
 
+    #booking_button_osk{
+        width: 10vw;
+    }
+
+    #booking_button_harm{
+        width: 10vw;
+    }
+
 
     #Harmanovagen{
         grid-area: bo2;
@@ -697,7 +729,8 @@ nav{
         height: auto;
         top: 0;
         border-radius: 5px;
-       margin-left: 1vw;
+        margin-left: 1vw;
+       
     }
 
     #art_harm{
