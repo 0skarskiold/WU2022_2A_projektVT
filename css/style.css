@@ -158,6 +158,15 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    background-color: transparent;
+}
+
+#besok_gullh_text h2{
+    background-color: transparent;
+}
+
+#besok_gullh_text p{
+    background-color: transparent;
 }
 
 #vandra_pa_harm{
@@ -186,7 +195,17 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
+    background-color: transparent;
 }
+
+#vandra_pa_harm_text p{
+    background-color: transparent;
+}
+
+#vandra_pa_harm_text h2{
+    background-color: transparent;
+}
+
 
 #bild_pa_vandring{
     height: inherit;
@@ -222,6 +241,15 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
+    background-color: transparent;
+}
+
+#upptack_pa_harm_text p{
+    background-color: transparent;
+}
+
+#upptack_pa_harm_text h2{
+    background-color: transparent;
 }
 
 #bild_pa_museum{
@@ -275,8 +303,8 @@
 
 #booking_button_harm{
     background-color: rgb(240, 240, 240);
-    width: 150px;
-    height: 75px;
+    width: 12vw;
+    height: 10vh;
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -320,8 +348,8 @@
 
 #booking_button_osk{
     background-color: rgb(240, 240, 240);
-    width: 150px;
-    height: 75px;
+    width: 12vw;
+    height: 10vh;
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -330,6 +358,11 @@
     font-size: 1.5rem;
     font-style: italic;
     text-decoration: none;
+}
+
+#booking_button_osk p{
+    background-color: rgb(240, 240, 240);
+    color: black;
 }
 
 #art_oskar{
@@ -548,11 +581,17 @@ nav{
     }
 
     #nav-links a {
-        margin-bottom: 50px;
-        height: 60px;
+        height: inherit;
         width: 20vw;
         border-radius: 7px;
         font-size: 1.2rem;
+    }
+
+    #nav-links li{
+        height: 11vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     nav{
@@ -571,6 +610,8 @@ nav{
 
     #article_start{
         width: 50vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
 
     /*Här kommer stylingen för desktop-versionen av boendesidan*/
@@ -580,33 +621,15 @@ nav{
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows:100px 50px 1fr 3fr 3fr ;
+        grid-template-rows:100px 50px 1fr 1fr ;
         grid-template-areas: 
         "hdr hdr"
         "nav nav"
-        "txt txt"
         "bo1 bo1"
         "bo2 bo2"
         ;
+        
     }
-
-    #article_boende{
-        grid-area: txt;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        padding-top: 20px;
-    }
-
-    #article_boende_text{
-        width: auto;
-        font-size: 1.15rem;
-        line-height: 25px;
-        bottom: 0;
-        padding: 0 100px 0 100px;
-    } 
 
     #oskargatan{
         grid-area: bo1;
@@ -617,6 +640,8 @@ nav{
         "rbk img"
         "art img"
         ;
+        padding-top: 5vh;
+        background-color: rgb(23, 37, 56);
     }
 
     #rubrik_osk{
@@ -631,10 +656,10 @@ nav{
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        padding-right: 12vw;
-        padding-left: 12vw;
+        padding-right: 6vw;
+        padding-left: 6vw;
         font-size: 1.2rem;  
-        height: 500px; /*VIKTIGT, FIXA GENERELL METOD FÖR DETTA*/
+        height: 80vh; 
     }
 
     #bild_pa_oskargatan{
@@ -643,6 +668,7 @@ nav{
         height: auto;
         bottom: 0;
         border-radius: 5px;
+        margin-right: 1vw;
     }
 
 
@@ -655,7 +681,8 @@ nav{
         "img rbk"
         "img art"
         ;  
-        padding-top: 5px;
+        padding-top: 5vh;
+        background-color: rgb(23, 37, 56);
     }
 
     #bild_pa_harmanovagen{
@@ -664,6 +691,7 @@ nav{
         height: auto;
         top: 0;
         border-radius: 5px;
+       margin-left: 1vw;
     }
 
     #art_harm{
@@ -672,10 +700,10 @@ nav{
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        padding-right: 120px;
-        padding-left: 180px;
+        padding-right: 6vw;
+        padding-left: 6vw;
         font-size: 1.2rem;  
-        height: 500px; /*VIKTIGT, FIXA GENERELL METOD FÖR DETTA*/
+        height: 80vh; 
     }
 
     #rubrik_harm{
