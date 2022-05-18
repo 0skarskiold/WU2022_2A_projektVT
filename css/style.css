@@ -587,7 +587,7 @@ nav{
 
     #article_start p{
         grid-area: txt;
-        font-size: 1.2rem;
+        font-size: 1rem;
         background-color: rgb(23, 37, 56);
         color: white;
     }
@@ -638,7 +638,7 @@ nav{
     }
 
     #article_start{
-        width: 50vw;
+        width: 40vw;
         padding-left: 5vw;
         padding-right: 5vw;
     }
@@ -685,15 +685,14 @@ nav{
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        padding-right: 6vw;
-        padding-left: 6vw;
-        font-size: 1.2rem;  
+
+        font-size: 1rem;  
         height: 80vh; 
     }
 
     #bild_pa_oskargatan{
         grid-area: img;
-        width: max-content;
+        width: 65vw;
         height: auto;
         bottom: 0;
         border-radius: 5px;
@@ -724,8 +723,8 @@ nav{
 
     #bild_pa_harmanovagen{
         grid-area: img;
-        width: max-content;
-        height: auto;
+        width: auto;
+        height: 90vh;
         top: 0;
         border-radius: 5px;
         margin-left: 1vw;
@@ -738,9 +737,7 @@ nav{
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        padding-right: 6vw;
-        padding-left: 6vw;
-        font-size: 1.2rem;  
+        font-size: 1rem;  
         height: 80vh; 
     }
 
