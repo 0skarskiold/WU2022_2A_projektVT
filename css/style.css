@@ -6,6 +6,9 @@
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+/* Fixa:
+        Fast bredd på boendesidans text(ok att man an scrolla)
+*/
 
 #grid_wrapper_galleri.no_scroll{
     overflow-y: hidden;
