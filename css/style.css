@@ -726,12 +726,11 @@ nav{
 
     #bild_pa_harmanovagen{
         grid-area: img;
-        width: 900px;
-        height: 70vh;
+        width: auto;
+        height: 75vh;
         top: 0;
         border-radius: 5px;
         margin-left: 1vw;
-       
     }
 
     #art_harm{
