@@ -6,9 +6,6 @@
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-/* Fixa:
-        Fast bredd på boendesidans text(ok att man an scrolla)
-*/
 
 #grid_wrapper_galleri.no_scroll{
     overflow-y: hidden;
@@ -276,7 +273,7 @@
 /*Här börjar stylingen för boendesidan*/
 
 #grid_wrapper_boende{
-    height: 225vh;
+    height: 250vh;
     width: 100%;    
     display: grid;
     grid-template-columns: 5fr 1fr; /*Kanske ändra sista till 50px*/
@@ -312,6 +309,7 @@
     padding: 10px;
     padding-top: 0px;
     font-family: 'Oxygen', sans-serif;
+    
 }
 
 #booking_button_harm{
@@ -401,11 +399,9 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 50px;
-    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 2fr 1fr;
     grid-template-areas: 
     "hdr hdr hdr nav"
-    "img img img img"
-    "img img img img"
     "img img img img"
     "art art art art"
     ;
@@ -510,10 +506,9 @@ nav{
 }
 
 
-
 #image_start{
-    width: auto;
-    height: 38vh;
+    width: 400px;
+    height: 50vh;
     border-radius: 5px;
 }
 
@@ -741,7 +736,6 @@ nav{
         justify-content: center;
         font-size: 1rem;  
         height: 80vh; 
-        width: 40vw;
     }
 
     #rubrik_harm{

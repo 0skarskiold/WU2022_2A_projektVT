@@ -2,7 +2,6 @@ const nav = document.getElementById('nav-links')
 const burger = document.getElementById('burger')
 const wrapper = document.getElementsByTagName('body')[0];
 
-
 function toggleMenu() {
     nav.classList.toggle('nav-active')
     burger.classList.toggle('crossed_line')
@@ -10,7 +9,6 @@ function toggleMenu() {
 }
 
 burger.addEventListener('click', toggleMenu)
-
 
 // Denna kod är hämtad från internet. Den gör så att bildspelet fungerar. 
 var slideIndex = 0;
